@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="diff History for Neural Language Agents">
+  <meta name="keywords" content="diff, diff history, language agents, language models, language policies">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>diff History for Neural Language Agents</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MZZ3FXP27"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-3MZZ3FXP27');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://arxiv.org/abs/2305.19240">
+            NetHack is Hard to Hack
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div class="typewriter"><h1 class="title is-1 publication-title"><code class="title">diff history</code> for Neural Language Agents</h1></div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://upiterbarg.github.io">Ulyana Piterbarg</a>,</span>
+            <span class="author-block">
+              <a href="https://www.lerrelpinto.com">Lerrel Pinto</a>,</span>
+            <span class="author-block">
+              <a href="https://cs.nyu.edu/~fergus/pmwiki/pmwiki.php">Rob Fergus</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">New York University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2312.07540.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.07540"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/upiterbarg/diff_history"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          
+          <p>Neural Language Models (LMs) offer an exciting solution for general-purpose embodied control. However, a key technical issue arises when using an LM-based controller: environment observations must be converted to text, which coupled with history, results in <span class="bad"><b>long and verbose textual prompts</b></span>. As a result, prior work in LM agents is limited to restricted domains with small observation size as well as minimal needs for interaction history or domain-specific instruction tuning. 
+          </p>
+
+          <p>
+          In this paper, we introduce <code>diff history</code>, a simple and highly effective solution to these issues. 
+          </p>
+
+          <p>
+          By applying the Unix <code>diff</code> command on consecutive text observations in the interaction histories used to prompt LM policies, we can both  <span class="effects"><b>abstract away redundant information</b></span> from textual input  and <span class="good"><b> <span class="effects">focus</span> the content of prompts <span class="effects">on the salient changes</span> in the environment</b></span>. Tuning LMs with <code>diff history</code> improves the quality of inference-time generations in low-resource settings.
+          </p> 
+
+          <p>
+          On <span class="results"><b>NetHack</b></span>, an unsolved video game that requires long-horizon reasoning for decision-making, LMs tuned with <code>diff history</code> match state-of-the-art performance for neural agents while needing <b><span class="results">1800x fewer training data</span></b> compared to prior work. Even on the simpler <span class="results"><b>BabyAI-Text</b></span> environment with concise text observations, we find that although <code>diff history</code> increases the length of prompts, the representation it provides offers a <b><span class="results">25% improvement</span></b> in the efficiency of instruction tuning. Further, we show that <code>diff history</code> scales favorably across different tuning dataset sizes.
+          </p>
+
+          <p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{piterbarg2023diff,
+      title={diff History for Neural Language Agents}, 
+      author={Ulyana Piterbarg and Lerrel Pinto and Rob Fergus},
+      year={2023},
+      eprint={2312.07540},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a> and is based on the Nerfies website <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> from Park et al.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
