@@ -8,8 +8,11 @@ code {
 
 
 code.title {
-  color: #009933;
+  color: black;
   font-size: 40px;
+  background: none;
+  padding-left: 0px;
+  padding-right: 3px;
 }
 
 
@@ -33,6 +36,7 @@ code.title {
   padding-top: 0;
   padding-bottom: 3rem;
 }
+
 
 .teaser {
   font-family: 'Google Sans', sans-serif;
