@@ -150,8 +150,8 @@
         <source src="./static/videos/demo.mov"
                 type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="diff"></span> 
+      <h2 class="subtitle has-text-justified">
+        <b><span class="diff">Tune your LLM agent on <i>text deltas</i></span></b>: We show that even <a href="https://huggingface.co/openai-community/gpt2">tiny LMs (120M params)</a> can be efficiently tuned into competitive and robust agents for hard decision-making settings like the video-game <a href="https://nethackchallenge.com/">NetHack</a>... <b>just extend your context length and process text observations with Unix-style <code>diff</code></b>.
       </h2>
     </div>
   </div>
@@ -171,7 +171,7 @@
 
           <p>
           In this paper, we introduce <code>diff history</code>, a simple and highly effective solution to these issues. 
-          By applying the Unix <code>diff</code> command on consecutive text observations in the interaction histories used to prompt LM policies, we can both  <span class="effects"><b>abstract away redundant information</b></span> from textual input  and <span class="good"><b> <span class="effects">focus</span> the content of prompts <span class="effects">on the salient changes</span> in the environment</b></span>. Tuning LMs with <code>diff history</code> improves the quality of inference-time generations in low-resource settings.
+          By applying the Unix <code>diff</code> command on consecutive text observations in the interaction histories used to prompt LM policies, we can both  <span class="effects"><b>abstract away redundant information</b></span> and <span class="effects"><b>focus the content of textual input on the salient changes</b></span> in the environment. Tuning LMs with <code>diff history</code> improves the quality of inference-time generations in low-resource settings.
           </p> 
 
           <p>
