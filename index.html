@@ -151,11 +151,15 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-justified">
-        <b><span class="diff">Tune your LLM agent on <i>text deltas</i></span></b>: We show that even <a href="https://huggingface.co/openai-community/gpt2">tiny LMs (~120M params)</a> can be efficiently tuned into highly competitive and robust agents for hard decision-making settings like the <a href="https://nethackchallenge.com/">video-game NetHack</a>... <b>just extend your context length and process text observations with the <code><a href="https://en.wikipedia.org/wiki/Diff">diff</a></code> <a href="https://en.wikipedia.org/wiki/Diff">command</a></b>.
+        <b><span class="diff">Tune your LLM agent on <i>text deltas</i></span></b>. We show that even <a href="https://huggingface.co/openai-community/gpt2">tiny LMs (~120M params)</a> can be efficiently tuned into highly competitive and robust agents for hard decision-making settings like the <a href="https://nethackchallenge.com/">video-game NetHack</a>... <b>just extend your context length and process text observations with the <code><a href="https://en.wikipedia.org/wiki/Diff">diff</a></code> <a href="https://en.wikipedia.org/wiki/Diff">command</a></b>.
       </h2>
     </div>
   </div>
 </section>
+
+
+
+
 
 
 <section class="section">
@@ -171,7 +175,7 @@
 
           <p>
           <span class="results"><b>In this paper, we introduce <code>diff</code> history, a simple and highly effective solution to these issues.</b></span>
-          By applying the Unix <code>diff</code> command on consecutive text observations in the interaction histories used to prompt LM policies, we can both  <span class="effects"><b>abstract away redundant information</b></span> and <span class="effects"><b>focus the content of textual input on the salient changes</b></span> in the environment. Tuning LMs with  <code>diff</code> history improves the quality of inference-time generations in low-resource settings.
+          By applying the Unix <code>diff</code> command on consecutive text observations in the interaction histories used to prompt LM policies, we can both  <span class="effects"><b>abstract away redundant information</b></span> and <span class="effects"><b>focus the content of textual input on the salient changes</b></span> in the environment. 
           </p> 
 
           <p>
@@ -186,6 +190,51 @@
 
   </div>
 </section>
+
+<p>
+</p>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+     <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <h2 class="title is-3">Method</h2>
+      <div class="content has-text-justified">
+         A <code>diff</code> history is a text sequence summarizing a neural language agent’s recent interactions in a decision-making setting, from left to right. A visualization is provided below.
+      </div>
+    </div>
+  </div>
+
+    <div class="hero-body"  style="text-align: center;" >
+        <img src="./static/images/diffhistory_method.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."
+             width=80%
+             />
+      <br>
+      <br>
+
+  </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths ">
+        <div class="content has-text-justified">
+          <p>
+           As shown above, <code>diff</code> histories consist of several components: (1) an <b><span class="instruction">instruction</span></b> describing the task; (2) an “anchor” <b>full-text observation</b>; and (3) the <b>subsequent <span class="action">actions</span></b> taken by the agent as well as the observed, <b>resultant <span class="diffobs">text deltas</span> in the world state</b>.  At inference-time, we can flexibly resize the history horizon provided to LM agents, up to the model context-length.
+          </p>
+          <p>
+              <span class="results"><b>Why <code>diff</code> history?</b></span> Text deltas have rich structure. In environments with natural language observations, the matching algorithm underlying the <code>diff</code> operator can localize the high-level changes in objects' states that occur between consecutive timesteps of interaction. In high-dimensional settings with complex and verbose full-text observations, <code>diff</code> history can also act as a <b>soft-compression mechanism</b>, preserving information while reducing per-observation token counts in interaction histories to yield agents with longer memory horizons.
+          </p>
+      </div>
+    </div>
+  </div>
+    
+</section>
+
+
 
 
 <section class="section" id="BibTeX">
