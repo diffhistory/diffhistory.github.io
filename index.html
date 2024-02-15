@@ -203,7 +203,7 @@
       <div class="column is-four-fifths">
       <h2 class="title is-3">Method</h2>
       <div class="content has-text-justified">
-         A <code>diff</code> history is a text sequence summarizing a neural language agent’s recent interactions in a decision-making setting, from left to right. A visualization is provided below.
+         <span class="results"><b>A <code>diff</code> history is a text sequence summarizing a neural language agent’s recent interactions in a decision-making setting</b></span>, from "left" to "right." A visualization is provided below.
       </div>
     </div>
   </div>
@@ -211,7 +211,7 @@
     <div class="hero-body"  style="text-align: center;" >
         <img src="./static/images/diffhistory_method.png"
              class="interpolation-image"
-             alt="Interpolate start reference image."
+             alt="Visualizing diff history."
              width=80%
              />
       <br>
@@ -225,8 +225,24 @@
           <p>
            As shown above, <code>diff</code> histories consist of several components: (1) an <b><span class="instruction">instruction</span></b> describing the task; (2) an “anchor” <b>full-text observation</b>; and (3) the <b>subsequent <span class="action">actions</span></b> taken by the agent as well as the observed, <b>resultant <span class="diffobs">text deltas</span> in the world state</b>.  At inference-time, we can flexibly resize the history horizon provided to LM agents, up to the model context-length.
           </p>
+      </div>
+    </div>
+  </div>
+
+   <div class="hero-body"  style="text-align: center;" >
+        <img src="./static/images/diffhistory_viz.png"
+             class="interpolation-image"
+             alt="Examples of diff vs full-text observations in BabyAI-Text and NetHack."
+             width=80%
+             />
+
+  </div>
+
+  <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths ">
+        <div class="content has-text-justified">
           <p>
-              <span class="results"><b>Why <code>diff</code> history?</b></span> Text deltas have rich structure. In environments with natural language observations, the matching algorithm underlying the <code>diff</code> operator can localize the high-level changes in objects' states that occur between consecutive timesteps of interaction. In settings with complex and verbose per-timestep observations, <code>diff</code> history can also act as a <b>soft-compression mechanism</b>, preserving information while reducing token counts to yield agents with longer memory horizons.
+              <span class="results"><b>Why <code>diff</code> history?</b></span> Text deltas returned by <code>diff</code> have a rich but simple algebraic structure (see the examples above). In text-based decision-making settings with natural language observations, the matching algorithm underlying the <code>diff</code> operator can also localize the high-level changes in environment properties, attributes, and object states that occur between consecutive timesteps of interaction. Thus, <code>diff</code> history provides a <span class="results"><b>dense learning signal for instruction tuning LMs on action prediction</b></span>. In high-dimensional environments with complex and verbose per-timestep observations, <code>diff</code> history can also act as a <span class="results"><b>soft-compression mechanism</b></span>, preserving information while reducing token counts to yield agents with <span class="results"><b>longer memory horizons at fixed context-length</b></span>.
           </p>
       </div>
     </div>
