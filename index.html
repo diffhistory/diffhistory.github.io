@@ -253,6 +253,60 @@
 
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+     <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <h2 class="title is-3">Results</h2>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+     <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <div class="content has-text-justified">
+        <p>
+          In <a href="https://www.nethack.org/"><b>NetHack</b></a>, LMs with <code>diff</code> history <span class="effects"><b>match previous state of the art performance for data-driven agents despite tuning on 1800x fewer labeled demonstration data</b></span>. 
+        </p>
+        <p>
+          <span class="bad">Ablating <code>diff</code> observations</span> from interaction histories in favor of full-text observations results in a <span class="bad"><b>98% decline in mean LM agent score</b></span> on withheld seeds of the game, suggesting that <code>diff</code> is responsible for the performance gains that we observe. 
+        </p>
+        <p>
+          Introducing an auxiliary "world model" prediction objective somewhat reduces the gap between <code>diff</code> and full-text interaction history agents. LMs with <code>diff</code> history also <span class="results"><b>outperform vision-language baselines trained on the same demonstration data by 780%</b></span> in mean test-time score.
+          </p>
+      </div>
+    </div>
+  </div>
+   <div class="hero-body"  style="text-align: center;" >
+        <img src="./static/images/nethack_results.png"
+             class="interpolation-image"
+             alt="Visualizing diff history."
+             width=70%
+             />
+        <br>
+        <br>
+  </div>
+
+  <div class="container is-max-desktop">
+     <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <div class="content has-text-justified">
+         <span class="results">In the <b>multi-task <b><a href="https://github.com/flowersteam/Grounding_LLMs_with_online_RL/tree/main/babyai-text">BabyAI-Text</a></b> environment</b></span>, introducing <code>diff</code> history improves the quality of inference-time LM generations resulting from low-resource instruction tuning, <span class="effects"><b>reducing FLOPs-to-convergence by 25%<b></span> in both low-data and ultra low-data tuning settings.
+      </div>
+      <div class="hero-body"  style="text-align: center;" >
+        <img src="./static/images/babyai_results.png"
+             class="interpolation-image"
+             alt="Examples of diff vs full-text observations in BabyAI-Text and NetHack."
+             width=100%
+             />
+      <div class="content has-text-justified">
+    </div>
+  </div>
+  </div>
+  
+    
+</section>
+
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
